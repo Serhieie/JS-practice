@@ -519,21 +519,21 @@ const fee = 3;
 // ВИДАЛЕННЯ ЄЛЕМЕНТІВ ПО ІНДЕКСУ// ВИДАЛЕННЯ ЄЛЕМЕНТІВ ПО ІНДЕКСУ// ВИДАЛЕННЯ ЄЛЕМЕНТІВ ПО ІНДЕКСУ// ВИДАЛЕННЯ ЄЛЕМЕНТІВ ПО ІНДЕКСУ
 // ВИДАЛЕННЯ ЄЛЕМЕНТІВ ПО ІНДЕКСУ// ВИДАЛЕННЯ ЄЛЕМЕНТІВ ПО ІНДЕКСУ// ВИДАЛЕННЯ ЄЛЕМЕНТІВ ПО ІНДЕКСУ// ВИДАЛЕННЯ ЄЛЕМЕНТІВ ПО ІНДЕКСУ
 
-const cards = ["Карточка-1", "Карточка-2", "Карточка-3", "Карточка-4", "Карточка-5"];
-console.table(cards);
-// const cardToRemove = "Карточка-3"; //DELETE CARD
-// const index = cards.indexOf(cardToRemove);
-// console.log(index);
-// // console.log(cards.splice(index, 1));
-// cards.splice(index, 1);
+// const cards = ["Карточка-1", "Карточка-2", "Карточка-3", "Карточка-4", "Карточка-5"];
 // console.table(cards);
+// // const cardToRemove = "Карточка-3"; //DELETE CARD
+// // const index = cards.indexOf(cardToRemove);
+// // console.log(index);
+// // // console.log(cards.splice(index, 1));
+// // cards.splice(index, 1);
+// // console.table(cards);
 
-// const cardToInsert = "Карточка-6"; //ВСТАВЛЯЄМО КАРТОЧКУ
-// const index = 3;
-// cards.splice(3, 0, "Карточка-6");
+// // const cardToInsert = "Карточка-6"; //ВСТАВЛЯЄМО КАРТОЧКУ
+// // const index = 3;
+// // cards.splice(3, 0, "Карточка-6");
+// // console.table(cards);
+
+// const cardToUpdate = "Карточка-4"; //Замінюємо карточку
+// const index = cards.indexOf(cardToUpdate);
+// cards.splice(index, 1, "Карточка-4.1");
 // console.table(cards);
-
-const cardToUpdate = "Карточка-4"; //Замінюємо карточку
-const index = cards.indexOf(cardToUpdate);
-cards.splice(index, 1, "Карточка-4.1");
-console.table(cards);
