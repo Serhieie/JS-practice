@@ -537,3 +537,60 @@ const fee = 3;
 // const index = cards.indexOf(cardToUpdate);
 // cards.splice(index, 1, "Карточка-4.1");
 // console.table(cards);
+function formatMessage(message, maxLength) {
+  let result;
+  // Change code below this line
+  if (message.length < maxLength) {
+    result = message.slice(maxLength, message.length);
+  } else {
+    result = message;
+  }
+  /// Change code above this line
+  console.log(result);
+  return result;
+}
+
+formatMessage("Curabitur ligula sapien", 16);
+formatMessage("Curabitur ligula sapien", 23);
+formatMessage("Vestibulum facilisis purus nec", 20);
+
+//ЗАДАЧА ЯКА ЗНАХОДИТЬ НАЙДОВШЕ СЛОВО //ЗАДАЧА ЯКА ЗНАХОДИТЬ НАЙДОВШЕ СЛОВО //ЗАДАЧА ЯКА ЗНАХОДИТЬ НАЙДОВШЕ СЛОВО
+//ЗАДАЧА ЯКА ЗНАХОДИТЬ НАЙДОВШЕ СЛОВО //ЗАДАЧА ЯКА ЗНАХОДИТЬ НАЙДОВШЕ СЛОВО //ЗАДАЧА ЯКА ЗНАХОДИТЬ НАЙДОВШЕ СЛОВО
+function findLongestWord(string) {
+  // Change code below this line
+  const splitedString = string.split(" ");
+  console.log(splitedString);
+  let longestWord = splitedString[0];
+
+  for (let i = 0; i < splitedString.length; i += 1) {
+    if (longestWord.length <= splitedString[i].length) {
+      longestWord = splitedString[i];
+      console.log(longestWord);
+    }
+  }
+  return longestWord;
+}
+findLongestWord("The quick brown fox jumped over the lazy dog");
+findLongestWord("Google");
+findLongestWord("May the force be with you");
+
+//ФУНКЦІЯ ЯКА ВИВОДИТЬ СПІЛЬНІ ЕЛЕМЕНТИ //ФУНКЦІЯ ЯКА ВИВОДИТЬ СПІЛЬНІ ЕЛЕМЕНТИ
+//ФУНКЦІЯ ЯКА ВИВОДИТЬ СПІЛЬНІ ЕЛЕМЕНТИ //ФУНКЦІЯ ЯКА ВИВОДИТЬ СПІЛЬНІ ЕЛЕМЕНТИ
+
+function getCommonElements(array1, array2) {
+  // Change code below this line
+  const elements = [];
+  for (let i = 0; i < array1.length; i += 1) {
+    if (array2.includes(array1[i])) {
+      elements.push(array1[i]);
+    }
+    console.log(elements);
+  }
+  return elements;
+  // Change code above this line
+}
+
+getCommonElements([1, 2, 3], [2, 4]);
+getCommonElements([1, 2, 3], [2, 1, 17, 19]);
+getCommonElements([24, 12, 27, 3], [12, 8, 3, 36, 27]);
+getCommonElements([10, 20, 30, 40], [4, 30, 17, 10, 40]);

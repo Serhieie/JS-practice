@@ -1,23 +1,32 @@
-// function includes(Список, імя) {
-//   for (let імя of список) {
-//     if (arr === value) {
-//       return true;
-//     }
-//     if (arr !== value) {
-//     }
-//   }
-//   return false;
-// }
+const pizzaPalace = {
+  pizzas: ["Ultracheese", "Smoked", "Four meats"],
+  order(pizzaName, onSuccess, onError) {
+    const { pizzas } = this;
+    if (!pizzas.includes(pizzaName)) {
+      onError(`There is no pizza with a name ${pizzaName} in the assortment.`);
+      console.log(
+        onError(`There is no pizza with a name ${pizzaName} in the assortment.`)
+      );
+      return;
+    }
+    console.log(onSuccess(pizzaName));
+    onSuccess(pizzaName);
+  },
+};
+// Change code above this line
 
-// function includes(array, value) {
-//   for (let arr of array) {
-//     if (arr === value) {
-//       return true;
-//     }
-//   }
-//   return false;
-// }
+// Callback for onSuccess
+function makePizza(pizzaName) {
+  return `Your order is accepted. Cooking pizza ${pizzaName}.`;
+}
 
-// includes(["Earth", "Mars", "Venus", "Jupiter", "Saturn"], "Uranus");
-// includes(["apple", "plum", "pear", "orange"], "plum");
-// includes(["apple", "plum", "pear", "orange"], "kiwi");
+// Callback for onError
+function onOrderError(error) {
+  return `Error!${error}`;
+}
+
+// Method calls with callbacks
+pizzaPalace.order("Smoked", makePizza, onOrderError);
+pizzaPalace.order("Four meats", makePizza, onOrderError);
+pizzaPalace.order("Big Mike", makePizza, onOrderError);
+pizzaPalace.order("Vienna", makePizza, onOrderError);
