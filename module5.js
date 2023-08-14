@@ -125,27 +125,135 @@
 // ЗБИТИ ЛІЧИЛЬНИК// ЗБИТИ ЛІЧИЛЬНИК// ЗБИТИ ЛІЧИЛЬНИК// ЗБИТИ ЛІЧИЛЬНИК// ЗБИТИ ЛІЧИЛЬНИК// ЗБИТИ ЛІЧИЛЬНИК// ЗБИТИ ЛІЧИЛЬНИК// ЗБИТИ ЛІЧИЛЬНИК
 // ЗБИТИ ЛІЧИЛЬНИК// ЗБИТИ ЛІЧИЛЬНИК// ЗБИТИ ЛІЧИЛЬНИК// ЗБИТИ ЛІЧИЛЬНИК// ЗБИТИ ЛІЧИЛЬНИК// ЗБИТИ ЛІЧИЛЬНИК// ЗБИТИ ЛІЧИЛЬНИК// ЗБИТИ ЛІЧИЛЬНИК
 // ЗБИТИ ЛІЧИЛЬНИК// ЗБИТИ ЛІЧИЛЬНИК// ЗБИТИ ЛІЧИЛЬНИК// ЗБИТИ ЛІЧИЛЬНИК// ЗБИТИ ЛІЧИЛЬНИК// ЗБИТИ ЛІЧИЛЬНИК// ЗБИТИ ЛІЧИЛЬНИК// ЗБИТИ ЛІЧИЛЬНИК
-const counter = {
-  value: 0,
-  increment(value) {
-    this.value += 1;
-  },
-  decrement(value) {
-    this.value -= 1;
-  },
-};
+// const counter = {
+//   value: 0,
+//   increment(value) {
+//     this.value += 1;
+//   },
+//   decrement(value) {
+//     this.value -= 1;
+//   },
+// };
 
-const decrementBtn = document.querySelector(".js-decrement");
-const incrementBtn = document.querySelector(".js-increment");
-const valueEl = document.querySelector(".js-value");
+// const decrementBtn = document.querySelector(".js-decrement");
+// const incrementBtn = document.querySelector(".js-increment");
+// const valueEl = document.querySelector(".js-value");
 
-decrementBtn.addEventListener("click", function () {
-  counter.decrement();
-  console.log(counter);
-  valueEl.textContent = counter.value;
-});
-incrementBtn.addEventListener("click", function () {
-  counter.increment();
-  console.log(counter);
-  valueEl.textContent = counter.value;
-});
+// decrementBtn.addEventListener("click", function () {
+//   counter.decrement();
+//   console.log(counter);
+//   valueEl.textContent = counter.value;
+// });
+// incrementBtn.addEventListener("click", function () {
+//   counter.increment();
+//   console.log(counter);
+//   valueEl.textContent = counter.value;
+// });
+
+//ПРОТОТИПИ //ПРОТОТИПИ //ПРОТОТИПИ //ПРОТОТИПИ //ПРОТОТИПИ //ПРОТОТИПИ //ПРОТОТИПИ //ПРОТОТИПИ //ПРОТОТИПИ
+//ПРОТОТИПИ //ПРОТОТИПИ //ПРОТОТИПИ //ПРОТОТИПИ //ПРОТОТИПИ //ПРОТОТИПИ //ПРОТОТИПИ //ПРОТОТИПИ //ПРОТОТИПИ //ПРОТОТИПИ
+//ПРОТОТИПИ //ПРОТОТИПИ //ПРОТОТИПИ //ПРОТОТИПИ //ПРОТОТИПИ //ПРОТОТИПИ //ПРОТОТИПИ //ПРОТОТИПИ //ПРОТОТИПИ //ПРОТОТИПИ
+//ПРОТОТИПИ //ПРОТОТИПИ //ПРОТОТИПИ //ПРОТОТИПИ //ПРОТОТИПИ //ПРОТОТИПИ //ПРОТОТИПИ //ПРОТОТИПИ //ПРОТОТИПИ //ПРОТОТИПИ
+// const objC = {
+//   z: 5,
+// };
+
+// console.log("objC ->", objC);
+
+// const objB = Object.create(objC);
+// objB.y = 2;
+
+// console.log("objB ->", objB);
+
+// const objA = Object.create(objB);
+// objA.x = 1;
+
+// console.log("objA ->", objA.y);
+
+// const dummyObj = Object.create({ message: "Це характеристика обєкту прототипу" });
+// dummyObj.message = "Це своя якість обєкта";
+
+// console.log("dummyObj", dummyObj);
+// console.log("dummyObj", dummyObj.message);
+
+// const Car = function ({ model, brand, price } = {}) {
+//   this.model = model;
+//   this.brand = brand;
+//   this.price = price;
+
+//   this.changePrice = function (newPrice) {
+//     this.price = newPrice;
+//   };
+// };
+
+// Car.prototype.changePrice = function (newPrice) {
+//   this.price = newPrice;
+// };
+
+// Car.prototype.sayHi = function () {
+//   console.log("Car.prototype.sayHi -> this", this);
+//   console.log("Hello  ;) ");
+// };
+
+// console.log(Car.prototype);
+
+// const myCar = new Car({
+//   brand: "audi",
+//   model: "q3",
+//   price: 35000,
+// });
+// const myCar2 = new Car({
+//   brand: "BMW",
+//   model: "X5",
+//   price: 150000,
+// });
+// const myCar3 = new Car({
+//   brand: "Ford",
+//   model: "volt",
+//   price: 27000,
+// });
+
+// console.log(myCar);
+// myCar.sayHi();
+// myCar.changePrice(38000);
+// console.log(myCar2);
+// myCar2.sayHi();
+// console.log(myCar3);
+// myCar3.sayHi();
+
+//Приклад з прототипом//Приклад з прототипом//Приклад з прототипом//Приклад з прототипом//Приклад з прототипом
+//Приклад з прототипом//Приклад з прототипом//Приклад з прототипом//Приклад з прототипом//Приклад з прототипом//Приклад з прототипом
+// //Приклад з прототипом//Приклад з прототипом//Приклад з прототипом//Приклад з прототипом//Приклад з прототипом//Приклад з прототипом
+// const User = function ({ email, password } = {}) {
+//   this.email = email;
+//   this.password = password;
+// };
+
+// User.prototype.changeEmail = function (newMail) {
+//   this.email = newMail;
+// };
+
+// const Bohd = new User({ email: "wewe12123@gmail.com", password: "12121212" });
+// Bohd.changeEmail("theninjainme@gmail.com");
+
+//СТАТИЧНІ СВОЙСТВА ТА МЕТОДИ //СТАТИЧНІ СВОЙСТВА ТА МЕТОДИ //СТАТИЧНІ СВОЙСТВА ТА МЕТОДИ //СТАТИЧНІ СВОЙСТВА ТА МЕТОДИ
+//СТАТИЧНІ СВОЙСТВА ТА МЕТОДИ //СТАТИЧНІ СВОЙСТВА ТА МЕТОДИ //СТАТИЧНІ СВОЙСТВА ТА МЕТОДИ //СТАТИЧНІ СВОЙСТВА ТА МЕТОДИ //СТАТИЧНІ СВОЙСТВА ТА МЕТОДИ
+//СТАТИЧНІ СВОЙСТВА ТА МЕТОДИ //СТАТИЧНІ СВОЙСТВА ТА МЕТОДИ //СТАТИЧНІ СВОЙСТВА ТА МЕТОДИ //СТАТИЧНІ СВОЙСТВА ТА МЕТОДИ
+//СТАТИЧНІ СВОЙСТВА ТА МЕТОДИ //СТАТИЧНІ СВОЙСТВА ТА МЕТОДИ //СТАТИЧНІ СВОЙСТВА ТА МЕТОДИ //СТАТИЧНІ СВОЙСТВА ТА МЕТОДИ
+//Cтатичні свойства та методи доступні тільки на самому  конструкторі
+//В статичних методах немає this
+
+// console.log(Bohd);
+// User.message = "Я статичне свойство мене немає на єкземплярі";
+// User.logInfo = function (obj) {
+//   console.log("this is Bohd(User) logInfo - > obj", obj);
+//   console.log("Email: ", obj.email);
+//   console.log("Password: ", obj.password);
+// };
+
+// User.logInfo(Bohd);
+
+// console.dir(User);
+
+// console.log(Math.round(5.232));
+// console.log(Math.PI);

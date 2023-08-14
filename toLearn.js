@@ -257,7 +257,7 @@ for (initialization; condition; post-expression) {
 }
 
 const target = 3;
-let sum = 0;
+let sum = 0;у
 
 for (let i = 0; i <= target; i += 1) {
   sum += i;
