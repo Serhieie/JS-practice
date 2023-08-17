@@ -257,3 +257,181 @@
 
 // console.log(Math.round(5.232));
 // console.log(Math.PI);
+
+//Класси//Класси//Класси//Класси//Класси//Класси//Класси//Класси//Класси//Класси//Класси//Класси//Класси//Класси//Класси
+//Класси//Класси//Класси//Класси//Класси//Класси//Класси//Класси//Класси//Класси//Класси//Класси//Класси//Класси//Класси
+//Класси//Класси//Класси//Класси//Класси//Класси//Класси//Класси//Класси//Класси//Класси//Класси//Класси//Класси//Класси
+//Класси//Класси//Класси//Класси//Класси//Класси//Класси//Класси//Класси//Класси//Класси//Класси//Класси//Класси//Класси
+// const Car = function ({ model, brand, price } = {}) {
+//   this.model = model;
+//   this.brand = brand;
+//   this.price = price;
+
+//   this.changePrice = function (newPrice) {
+//     this.price = newPrice;
+//   };
+// };
+
+// Car.prototype.changePrice = function (newPrice) {
+//   this.price = newPrice;
+// };
+
+// Car.prototype.sayHi = function () {
+//   console.log("Car.prototype.sayHi -> this", this);
+//   console.log("Hello  ;) ");
+// };
+
+// console.log(Car.prototype);
+
+// const myCar = new Car({
+//   brand: "audi",
+//   model: "q3",
+//   price: 35000,
+// });
+// const myCar2 = new Car({
+//   brand: "BMW",
+//   model: "X5",
+//   price: 150000,
+// });
+// const myCar3 = new Car({
+//   brand: "Ford",
+//   model: "volt",
+//   price: 27000,
+// });
+
+// class Car1 {
+//   static AAA = "AAA";
+//   static description = "aeaeaweweaeaeaweaweawe";
+//   static logInfo(carObj) {
+//     console.log("carObj info - > ", carObj);
+//   }
+
+//   #test = "test";
+//   mySuperPublickBuild = 555;
+
+//   constructor({ brand, model, price } = {}) {
+//     console.log("constructor in process");
+//     console.log(this);
+
+//     this.brand = brand;
+//     this.model = model;
+//     this.price = price;
+//   }
+
+//   changePrice(newPrice) {
+//     this.price = newPrice;
+//   }
+
+//   get model() {
+//     return this.model;
+//   }
+
+//   set model(newModel) {
+//     this._model = newModel;
+//   }
+// }
+
+// console.dir(Car1);
+// const carInstance = new Car1({
+//   brand: "Audi",
+//   model: "Q3",
+//   price: 35000,
+// });
+
+// console.log(Object.getPrototypeOf(carInstance) === Car1.prototype);
+// console.log(carInstance);
+// Car1.logInfo(carInstance);
+
+// const obj = {
+//   _a: 100,
+//   get a() {
+//     return this._a;
+//   },
+//   set a(x) {
+//     return (this._a = x);
+//   },
+// };
+// console.log(obj);
+
+//Спадкування НАСЛЕДУВАННЯ//Спадкування НАСЛЕДУВАННЯ//Спадкування НАСЛЕДУВАННЯ//Спадкування НАСЛЕДУВАННЯ//Спадкування НАСЛЕДУВАННЯ
+//Спадкування НАСЛЕДУВАННЯ//Спадкування НАСЛЕДУВАННЯ//Спадкування НАСЛЕДУВАННЯ//Спадкування НАСЛЕДУВАННЯ//Спадкування НАСЛЕДУВАННЯ
+//Спадкування НАСЛЕДУВАННЯ//Спадкування НАСЛЕДУВАННЯ//Спадкування НАСЛЕДУВАННЯ//Спадкування НАСЛЕДУВАННЯ//Спадкування НАСЛЕДУВАННЯ
+
+// class Character {
+//   constructor({ name = "hero", xp = 0, gold = 0 } = {}) {
+//     this.name = name;
+//     this.xp = xp;
+//     this.gold = gold;
+//   }
+//   gainXp(amount) {
+//     console.log(`${this.name} Отримує ${amount} єкспи`);
+//     this.xp += amount;
+//   }
+//   gainGold(amount) {
+//     console.log(`${this.name} Отримує ${amount} голди`);
+//     this.gold += amount;
+//   }
+// }
+// class Warrior extends Character {
+//   constructor({ weapon, ...restProps } = {}) {
+//     super(restProps);
+//     this.weapon = weapon;
+//   }
+
+//   attack() {
+//     console.log(`${this.name} attack the enemy with ${this.weapon}`);
+//   }
+// }
+// class Berserk extends Warrior {
+//   constructor({ warcry, ...restProps } = {}) {
+//     super(restProps);
+//     this.warcry = warcry;
+//   }
+
+//   babyRage() {
+//     console.log(this.warcry);
+//   }
+// }
+// class Mage extends Character {
+//   constructor({ spell, ...restProps } = {}) {
+//     super(restProps);
+//     this.spell = spell;
+//   }
+
+//   cast() {
+//     console.log(`${this.name} cast to the enemy with ${this.spell}`);
+//   }
+// }
+// // const raimir = new Hero({ name: "Raimir", xp: 100, gold: 0 });
+// const raimir = new Warrior({ name: "Raimir", xp: 100, gold: 0, weapon: "Sword" });
+// console.log(raimir);
+// const neelu = new Mage({ name: "Neelu", xp: 100, gold: 0, spell: ["Frostbolt"] });
+// neelu.cast();
+// neelu.gainXp(100);
+// neelu.gainGold(1);
+// const Daddy = new Berserk({
+//   name: "Daddy",
+//   xp: 100,
+//   gold: 0,
+//   weapon: "Axe",
+//   warcry: "AAAAGGGGGRRRRRRRRRRR",
+// });
+
+// console.log(Daddy);
+
+// raimir.gainGold(100);
+// raimir.gainGold(1);
+// raimir.attack();
+
+// console.log(raimir.__proto__ === Warrior.prototype);
+// console.log(Object.getPrototypeOf(raimir) === Warrior.prototype);
+// console.log(Warrior.prototype.__proto__ === Character.prototype);
+
+//ФУНКЦІЯ ДЛЯ ВИДАЛЕННЯ ЄЛЕМЕНТУ З ДОМАШНЬОГО ЗАВДАННЯ //ФУНКЦІЯ ДЛЯ ВИДАЛЕННЯ ЄЛЕМЕНТУ З ДОМАШНЬОГО ЗАВДАННЯ //ФУНКЦІЯ ДЛЯ ВИДАЛЕННЯ ЄЛЕМЕНТУ З ДОМАШНЬОГО ЗАВДАННЯ
+//ФУНКЦІЯ ДЛЯ ВИДАЛЕННЯ ЄЛЕМЕНТУ З ДОМАШНЬОГО ЗАВДАННЯ //ФУНКЦІЯ ДЛЯ ВИДАЛЕННЯ ЄЛЕМЕНТУ З ДОМАШНЬОГО ЗАВДАННЯ //ФУНКЦІЯ ДЛЯ ВИДАЛЕННЯ ЄЛЕМЕНТУ З ДОМАШНЬОГО ЗАВДАННЯ
+// removeItem(itemToRemove) {
+//   const indexToRemove = this.items.findIndex(item => item === itemToRemove);
+//   if (indexToRemove !== -1) {
+//     this.items.splice(indexToRemove, 1);
+//   }
+// }
